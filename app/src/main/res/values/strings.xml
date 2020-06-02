@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FundamentosAndroid</string>
+    <string name="to">to</string>
+    <string name="subject">subject</string>
+    <string name="message">message</string>
+    <string name="send">send</string>
+    <string name="button_3">Third Button</string>
+    <string name="button_2">Second Button</string>
+    <string name="button_1">First Button</string>
+</resources>
