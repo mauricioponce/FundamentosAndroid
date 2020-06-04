@@ -12,4 +12,16 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="RightButton" parent="Widget.AppCompat.Button">
+        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">right</item>
+    </style>
+
+
+    <style name="ThemeOne" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:buttonStyle">@style/RightButton</item>
+    </style>
+
 </resources>
