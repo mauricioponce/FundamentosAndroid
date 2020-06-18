@@ -1,6 +1,6 @@
 package com.eme.android.java.interfaceexample;
 
-class Circle implements Shape {
+public class Circle implements Shape {
 
     private double radio;
 
