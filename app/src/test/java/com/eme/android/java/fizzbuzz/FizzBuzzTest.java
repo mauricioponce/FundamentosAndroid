@@ -3,8 +3,6 @@ package com.eme.android.java.fizzbuzz;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
-
 import static com.google.common.truth.Truth.assertThat;
 
 public class FizzBuzzTest {
@@ -17,15 +15,32 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void fizzbuzz_happyCase() {
+    public void convert_number() {
         // Given
-        int n = 10;
+        int number = 1;
+        String expected = "1";
 
         // When
-        List<String> result = fb.fizzBuzz(n);
+        String result = fb.convert(number);
 
         // Then
         assertThat(result).isNotNull();
-        assertThat(result).hasSize(n);
+        assertThat(result).isNotEmpty();
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void convert_fizz() {
+        // Given
+        int number = 3;
+        String expected = "fizz";
+
+        // When
+        String result = fb.convert(number);
+
+        // Then
+        assertThat(result).isNotNull();
+        assertThat(result).isNotEmpty();
+        assertThat(result).isEqualTo(expected);
     }
 }
