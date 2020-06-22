@@ -5,16 +5,27 @@ import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.eme.android.java.databinding.ActivityMainBinding;
+
+import timber.log.Timber;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        initLog();
 
-        Log.v(TAG, "Mensaje de log muy verboso");
-        Log.wtf(TAG, "Este error es imposible!");
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+    }
+
+    private void initLog() {
+        if (BuildConfig.DEBUG) {
+            Timber.plant(new Timber.DebugTree());
+        }
     }
 }
