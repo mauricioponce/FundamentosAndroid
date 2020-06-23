@@ -1,15 +1,18 @@
 package com.eme.android.java.views;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
 import timber.log.Timber;
 
-public class MyCustomView extends androidx.appcompat.widget.AppCompatTextView {
+@SuppressLint("AppCompatCustomView")
+public class MyCustomView extends TextView {
 
     public MyCustomView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
